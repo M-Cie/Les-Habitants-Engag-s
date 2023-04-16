@@ -203,7 +203,7 @@ nav {
         transform: translate(-25px);
         margin-right: px;
     }
-}
+
             /* Citation + lien vers TZCLD */
 
 .citation {
@@ -239,7 +239,15 @@ nav {
         font-size: 15px;
     }
 }
-
+@media screen and (max-width: 420px){
+    .citation {
+        font-size: 15px;
+        margin: 10px;
+    }
+    #TZCLD {
+        font-size: 15px;
+    }
+}
             /* Articles */
 .container {
     width: 1200px;
@@ -456,8 +464,32 @@ nav {
         font-size: 10px;
     }
 }
-
-/* Bas de page */
+@media screen and (max-width: 420px){
+    .container {
+        width: 350px;
+        height: auto;
+        margin: 5px auto;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 10px;
+    }
+    .circle {
+        width: 75px;
+        height: 75px;
+    }
+    .item h2 {
+        margin: 5px 0 5px 55px;
+        font-weight: 600;
+        font-size: 15px;
+    }
+    .item p {
+        margin: 0px 15px 0px 0;
+        padding-left: 10px;
+        font-size: 10px;
+    }
+}
+    /* Bas de page */
 
 .footer-positioned {
     width: 100%;
