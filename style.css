@@ -203,7 +203,7 @@ nav {
         transform: translate(-25px);
         margin-right: px;
     }
-
+}
             /* Citation + lien vers TZCLD */
 
 .citation {
@@ -464,7 +464,7 @@ nav {
         font-size: 10px;
     }
 }
-@media screen and (max-width: 420px){
+@media screen and (max-width: 420px){ 
     .container {
         width: 350px;
         height: auto;
