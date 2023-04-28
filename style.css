@@ -8,6 +8,7 @@ body {
     height: 100vh;
     background: #f1f1f1;
     font-family: 'Phudu', sans-serif;
+    font-weight: 700;
 }
 
             /* Accueil */
@@ -31,7 +32,7 @@ body {
 }
 
 .accueil h1 {
-    margin: 0 0 0 260px;
+    margin: 0 0 0 450px;
     line-height: 200px;
     font-size: 4rem;
 }
@@ -49,6 +50,21 @@ body {
     .accueil img {
         width: 150px;
         height: 150px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .accueil {
+        height: 150px;
+        min-height: auto;
+    }
+    .accueil h1 {
+        font-size: 2em;
+        line-height: 150px;
+        margin: 0 0 0 80px;
+    }
+    .accueil img {
+        width: 140px;
+        height: 140px;
     }
 }
 
@@ -87,48 +103,91 @@ body {
         /* Navigation */
 
 nav {
-    position: absolute;
-    top: 145px;
-    transform: translateY(-5px);
+    position:absolute;
+    top: 4px;
+    transform: translateY(-50%);
     height: 70px;
     width: 100%;
-    /* background: lightblue; */
+    
 }
-.menu-burger {
+/* .menu-burger {
     width: 50px;
     position: absolute;
     top: -90px;
     right: 15px;
     display: none;
     z-index: 25;
-}
+} */
 .liste-nav {
-    width: 100%;
-    text-align: right;
+    display: flex;
+    justify-content: end;
+    align-content: center;
 }
 .item-nav {
-    display: inline-block;
+    text-align: center;
     line-height: 70px;
     margin: 0 10px;
+    list-style-type: none;
 }
-.lien-nav{
+nav a{
     text-decoration: none;
     color: #040404;
     font-size: 19px;
 }
-.item-nav a::after {
+.line {
+    
+    flex-direction: column;
+    background: #111;
+    margin: 10px;
+}
+.line .lien-ext {
+    color: #adff2f;
+    padding: 10px;
+   
+}
+.line .lien-ext::after {
+    display: block;
+    margin: 0 auto;
+    height: 2px;
+    background: #adff2f;
     content: "";
+    transition: width 0.2s ease-in-out;
+    width: 0px;
+}
+.line-ext .lien-ext:hover::after {
+    width: 100%;
+}
+.item-nav a::after {
     display: block;
     margin: 0 auto;
     height: 2px;
     background: #030303;
+    content: "";
     transition: width 0.2s ease-in-out;
     width: 0px;
 }
 .item-nav a:hover::after {
     width: 100%;
 }
-
+@media screen and (max-width: 1920px){
+    nav {
+        top: 150px;
+        height: 70px;
+    }
+    .liste-nav {
+        line-height: 50px;
+    }
+    .lien-nav {
+        font-size: 19px;
+    }
+    .line {
+       display: none;
+    }
+    .line.active {
+       transition: 0.25s;
+       display: flex;
+    }
+}
 @media screen and (max-width: 840px){
     nav {
         top: 100px;
@@ -141,12 +200,30 @@ nav {
         font-size: 16px;
     }
 }
-
+@media screen and (max-width: 700px) {
+    nav {
+        top: 120px;
+        height: 50px;
+    }
+    .liste-nav {
+        line-height: 50px;
+    }
+    .lien-nav {
+        font-size: 16px;
+    }
+    .lien-ext {
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 400px) {
-    .menu-burger {
+    /* .menu-burger {
         width: 25px;
         display: block;
         top: -30px;
+    } */
+    .nav {
+        top: 120px;
+        height: 50px;
     }
     .liste-nav {
         padding-top: 5px;
@@ -174,16 +251,14 @@ nav {
     }
 }
 @media screen and (max-width: 420px) {
-    .menu-burger {
+    /* .menu-burger {
         width: 25px;
         display: block;
         top: -30px;
-    }
+    } */
     .liste-nav {
         padding-top: 5px;
         display: inline-block;
-        /* flex-direction: column; */
-        /* justify-content: center; */
         background: linear-gradient(to bottom, rgb(22, 85, 105), #adff2f);
         height: 75px;
         position: relative;
@@ -524,13 +599,15 @@ nav {
 .sous-titre {
     position: absolute;
     top: 25px;
-    left: 47%;
+    left: 49%;
     transform: translate(-30%);
+    /* transition: 1s ease-in-out; */
 }
+
 
 .panneau {
     position: absolute;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%);
     z-index: 10;
@@ -593,7 +670,7 @@ ul a img {
 
 .lieu {
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 800;
     color: #040404;
 }
 
@@ -609,5 +686,6 @@ ul a img {
 .img-card:hover {
     transform: scale(0.95);
     border: none;
-    box-shadow: 0 0 0 2px teal;
+    /* box-shadow: 0 0 0 2px teal; */
+    outline: 1px solid teal;
 }
