@@ -520,8 +520,23 @@ nav {
 }
 
         /* Gallerie */
-
+.test1 {
+    height: 150px;
+}
+.test {
+    height: 50px;
+    background: #adff2f;
+}
+.photo {
+    height: 20px;
+    
+}
 .sous-titre {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 55px;
+}
+/* .sous-titre {
     position: absolute;
     top: 25px;
     left: 47%;
@@ -534,7 +549,7 @@ nav {
     left: 50%;
     transform: translate(-50%);
     z-index: 10;
-}
+} */
 
 .gallery {
     max-width: 1500px;
